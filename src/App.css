@@ -477,51 +477,31 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .hero-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .hero-description {
-    display: -webkit-box;
-    font-size: 0.9rem;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    line-clamp: 3;
-    overflow: hidden;
-    margin-bottom: 1rem;
+    display: none;
   }
 
   .btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 8px 15px;
+    font-size: 1rem;
   }
 
   .nav-brand {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .row-poster {
-    width: 110px;
-    height: 165px;
+    width: 120px;
+    height: 180px;
   }
 
   .slider-btn {
     font-size: 1.5rem;
     width: 30px;
-  }
-
-  .email-cta {
-    padding: 0 2%;
-  }
-
-  .email-form input {
-    font-size: 1rem;
-    padding: 10px 15px;
-  }
-
-  .btn-get-started {
-    font-size: 1rem;
-    padding: 0 15px;
   }
 }
