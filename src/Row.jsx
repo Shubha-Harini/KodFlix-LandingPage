@@ -11,7 +11,7 @@ function Row({ title, searchTerm, onMovieClick }) {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(`http://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`);
+        const response = await axios.get(`https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`);
         if (response.data.Search) {
           // Filter out movies with no poster and remove duplicates
           const validMovies = response.data.Search.filter(movie => movie.Poster !== 'N/A');

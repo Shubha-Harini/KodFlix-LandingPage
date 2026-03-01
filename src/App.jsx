@@ -40,7 +40,7 @@ function App() {
     try {
       setLoading(true);
       const randomMovieId = popularMovies[Math.floor(Math.random() * popularMovies.length)];
-      const response = await axios.get(`http://www.omdbapi.com/?i=${randomMovieId}&plot=full&apikey=${apiKey}`);
+      const response = await axios.get(`https://www.omdbapi.com/?i=${randomMovieId}&plot=full&apikey=${apiKey}`);
       if (response.data.Response === 'True') {
         const rawPoster = response.data.Poster !== 'N/A' && response.data.Poster ? response.data.Poster : 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1920&q=80';
         response.data.Poster = rawPoster.includes('SX300') ? rawPoster.replace('SX300', 'SX1080') : rawPoster;
@@ -69,7 +69,7 @@ function App() {
   const handleMovieSelect = async (clickedMovie) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?i=${clickedMovie.imdbID}&plot=full&apikey=${apiKey}`);
+      const response = await axios.get(`https://www.omdbapi.com/?i=${clickedMovie.imdbID}&plot=full&apikey=${apiKey}`);
       if (response.data.Response === 'True') {
         // Force high resolution poster replacement before setting state!
         const rawPoster = response.data.Poster !== 'N/A' && response.data.Poster ? response.data.Poster : 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1920&q=80';
